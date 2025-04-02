@@ -1,0 +1,33 @@
+.categories {
+  padding: 60px 20px;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+    grid-template-areas:
+      "title title item item item"
+      ". . item item item";
+    h2 {
+      grid-area: title;
+      text-transform: uppercase;
+      width: 100%;
+      font-size: 42px;
+    }
+    a {
+      .category {
+        text-align: center;
+        grid-area: item;
+        transition: all 0.5s ease;
+        &:hover {
+          transform: scale(1.1);
+          color: rgb(150, 147, 147);
+        }
+        .nameUnderline {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

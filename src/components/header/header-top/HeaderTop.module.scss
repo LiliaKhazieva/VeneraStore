@@ -1,0 +1,38 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in;
+    &:hover {
+      background-color: rgba(18, 18, 18, 0.06);
+    }
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 10px;
+    gap: 20px;
+
+    :last-child {
+      color: #f84ab5;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #575757;
+      }
+    }
+    :hover {
+      color: #f84ab5;
+      transition: color 0.3s ease;
+    }
+  }
+}

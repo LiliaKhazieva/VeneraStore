@@ -1,0 +1,71 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &:hover .btn {
+    opacity: 1;
+  }
+  .track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform;
+    transition-property: translate;
+    transition-timing-function: ease-in-out;
+    img {
+      flex: 1 0 100%;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+  .dots {
+    border-radius: 8px;
+    background-color: rgba($color: #000000, $alpha: 0.05);
+    padding: 5px 8px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    gap: 15px;
+    .dot,
+    .active {
+      cursor: pointer;
+      background-color: rgb(119, 117, 117);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: rgb(203, 196, 196);
+      }
+    }
+    .active {
+      transform: scale(1.3);
+      background-color: #fff !important;
+    }
+  }
+  .btn {
+    opacity: 0;
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
+}

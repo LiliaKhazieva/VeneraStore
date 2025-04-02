@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  .img {
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .btn {
+    background: -webkit-linear-gradient(90deg, #405758, #5e787b, #405758);
+    background: linear-gradient(90deg, #405758, #5e787b, #405758);
+    padding: 10px 0;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .btnViewing {
+    font-size: 14px;
+    position: absolute;
+    display: none;
+    top: 190px;
+    left: 10px;
+    white-space: no-wrap;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &:hover .btnViewing {
+    display: block;
+  }
+}

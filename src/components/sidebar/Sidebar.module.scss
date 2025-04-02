@@ -1,0 +1,54 @@
+.wrapper {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .sidebar {
+    animation: showedSidebar 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    ul {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .item {
+        color: #000;
+        border-radius: 8px;
+        padding: 8px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+          background: -webkit-linear-gradient(90deg, #405758, #5e787b, #405758);
+          background: linear-gradient(90deg, #405758, #5e787b, #405758);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.hidedSidebar {
+  width: 0;
+}
+
+.showedSidebar {
+  width: 300px;
+  transition: width 0.35s;
+}
+
+@keyframes showedSidebar {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,86 @@
+.sliderCollection {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    .content {
+      display: flex;
+      gap: 20px;
+      .link {
+        background-color: rgb(39, 39, 39);
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 16px;
+        color: #fff;
+        transition: background-color color 0.5s ease;
+        &:hover {
+          background-color: rgb(111, 111, 111);
+        }
+      }
+      .btns {
+        display: flex;
+        gap: 30px;
+        .prev,
+        .next {
+          color: #575656;
+          width: 44px;
+          height: 44px;
+          padding: 10px;
+          border-radius: 50%;
+          background-color: rgba(18, 18, 18, 0.12);
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: rgba(18, 18, 18, 0.15);
+            svg {
+              transform: translateX(-3px);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+        .next {
+          &:hover {
+            background-color: rgba(18, 18, 18, 0.15);
+            svg {
+              transform: translateX(3px);
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .track {
+      display: flex;
+      margin-left: 10px;
+      gap: 40px;
+      width: 9999px;
+      height: 100%;
+      .link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        img {
+          width: 260px;
+          height: 260px;
+          object-fit: cover;
+        }
+
+        .price {
+          font-weight: 500;
+          margin-top: 10px;
+        }
+        .brand {
+          margin-bottom: 5px;
+          text-transform: uppercase;
+          color: #817f7f;
+        }
+      }
+    }
+  }
+}
