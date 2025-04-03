@@ -1,9 +1,11 @@
 .sliderCollection {
+  padding-bottom: 20px;
   .top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     padding-bottom: 40px;
     .list {
       display: flex;
