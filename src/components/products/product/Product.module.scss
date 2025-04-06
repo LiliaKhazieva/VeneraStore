@@ -2,11 +2,29 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
   cursor: pointer;
+  .wrapper {
+    position: relative;
+  }
   .img {
     border-radius: 16px;
     object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+  .btnViewing {
+    font-size: 14px;
+    position: absolute;
+    display: none;
+    bottom: 10px;
+    white-space: no-wrap;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &:hover .btnViewing {
+    display: block;
   }
 
   .btn {
@@ -16,21 +34,5 @@
     border-radius: 12px;
     color: #fff;
     font-weight: 600;
-  }
-
-  .btnViewing {
-    font-size: 14px;
-    position: absolute;
-    display: none;
-    top: 190px;
-    left: 10px;
-    white-space: no-wrap;
-    padding: 10px 16px;
-    border-radius: 10px;
-    background-color: #fff;
-  }
-
-  &:hover .btnViewing {
-    display: block;
   }
 }

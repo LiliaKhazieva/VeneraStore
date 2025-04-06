@@ -5,7 +5,6 @@ export default function JewelryPage() {
   return (
     <section style={{ position: "relative" }}>
       <Products products={ringsData} />
-      {/* <Sidebar /> */}
     </section>
   );
 }

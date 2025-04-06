@@ -4,10 +4,8 @@ import styles from "./Products.module.scss";
 
 export function Products({ products }: { products: IProduct[] }) {
   return (
-    <div>
-      <ul className={styles.list}>
-        {!!products.length && products.map((item) => <Product item={item} />)}
-      </ul>
-    </div>
+    <ul className={`${styles.list} container`}>
+      {!!products.length && products.map((item) => <Product item={item} />)}
+    </ul>
   );
 }

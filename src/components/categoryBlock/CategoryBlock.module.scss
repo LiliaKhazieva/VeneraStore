@@ -1,0 +1,32 @@
+.top {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    padding-top: 50px;
+    .breadcrumbs {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  .banner {
+    width: 50%;
+    padding-top: 30px;
+    height: 350px;
+  }
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+}

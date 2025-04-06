@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { IProduct } from "../../screens/home/products.types";
 import styles from "./Product.module.scss";
-import cn from "clsx";
 import { useState } from "react";
 import { Popup } from "@/components/popup/Popup";
 
@@ -14,20 +13,15 @@ export function Product({ item }: { item: IProduct }) {
   return (
     <>
       <li className={styles.item}>
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={styles.btnViewing}
-        >
-          Быстрый просмотр
-        </button>
-        <Image
-          className={styles.img}
-          src={item.url}
-          width={176}
-          height={234}
-          alt={item.title}
-        />
-
+        <div className={styles.wrapper}>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={styles.btnViewing}
+          >
+            Быстрый просмотр
+          </button>
+          <img className={styles.img} src={item.url} alt={item.title} />
+        </div>
         <span className={styles.price}>{item.price} &#8381;</span>
         <p className={styles.title}>{item.title}</p>
 
