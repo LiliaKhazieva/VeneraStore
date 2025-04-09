@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .category {
+    cursor: pointer;
+    background-color: #f4f2f2;
+    padding: 10px 10px;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    text-wrap: nowrap;
+    &:hover {
+      background-color: #e3e1e1;
+    }
+  }
+  .active {
+    background-color: rgb(48, 47, 47);
+    color: #fff;
+    &:hover {
+      background-color: rgb(28, 28, 28);
+    }
+  }
+}

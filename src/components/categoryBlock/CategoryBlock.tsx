@@ -1,5 +1,8 @@
 import { ChevronRight } from "lucide-react";
 import styles from "./CategoryBlock.module.scss";
+import { sliderData } from "../carousel/carousel.data";
+import { NavBar } from "../navBar/NavBar";
+import { navbarData } from "../navBar/navBar.data";
 
 export function CategoryBlock() {
   return (
@@ -21,16 +24,7 @@ export function CategoryBlock() {
           />
         </div>
       </div>
-      <ul className={styles.list}>
-        <li>
-          <a href="/">Кольца</a>
-        </li>
-        <li>Браслеты</li>
-        <li>Серьги</li>
-        <li>Колье</li>
-        <li>Кольца</li>
-        <li>Браслеты</li>
-      </ul>
+      <NavBar arr={navbarData} />
     </>
   );
 }

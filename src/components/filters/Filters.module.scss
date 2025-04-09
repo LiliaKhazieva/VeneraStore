@@ -1,0 +1,38 @@
+.filters {
+  .sort {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-top: 10px;
+    }
+    .select {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background-color: #dcdbdb;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .popup {
+      margin-top: 8px;
+      background-color: #fff;
+      padding: 8px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(18, 18, 18, 0.07);
+      box-shadow: 0 16px 28px rgba(18, 18, 18, 0.1);
+
+      .order {
+        padding: 10px 24px;
+        cursor: pointer;
+        &:hover {
+          background-color: #dcdbdb;
+        }
+      }
+      .active {
+        color: #f457c7;
+      }
+    }
+  }
+}

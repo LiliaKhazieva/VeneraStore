@@ -1,6 +1,11 @@
-.list {
+.content {
   display: flex;
-  flex-wrap: wrap;
-  padding: 25px 0;
-  gap: 25px;
+  justify-content: space-between;
+  .list {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding: 25px 0;
+    gap: 25px;
+  }
 }

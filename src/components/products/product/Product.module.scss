@@ -4,13 +4,12 @@
   gap: 10px;
   cursor: pointer;
   .wrapper {
+    max-width: 320px;
+    max-height: 320px;
     position: relative;
-  }
-  .img {
-    border-radius: 16px;
-    object-fit: cover;
-    width: 300px;
-    height: 300px;
+    .img {
+      object-fit: cover;
+    }
   }
   .btnViewing {
     font-size: 14px;
