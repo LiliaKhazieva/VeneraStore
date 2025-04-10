@@ -1,15 +1,15 @@
 import { Products } from "@/components/products/Products";
-import { ringsData } from "./rings.data";
+import { necklaceData } from "./necklace.data";
 import { CategoryBlock } from "@/components/categoryBlock/CategoryBlock";
 import { NavBar } from "@/components/navBar/NavBar";
 import { navbarDataRings } from "@/components/navBar/navBar.data";
 
-export default function RingsPage() {
+export default function NecklacePage() {
   return (
     <section style={{ position: "relative" }} className="container">
-      <CategoryBlock length={ringsData.length} title="Кольца" />
+      <CategoryBlock length={necklaceData.length} title="Кольца" />
       <NavBar arr={navbarDataRings} />
-      <Products products={ringsData} />
+      <Products products={necklaceData} />
     </section>
   );
 }

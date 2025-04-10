@@ -17,28 +17,24 @@ export const navData: INav[] = [
     url: PAGE.JEWELRY,
     dropdown: [
       {
-        title: "Серьги",
-        url: PAGE.JEWELRY,
-      },
-      {
         title: "Кольца",
-        url: PAGE.JEWELRY,
-      },
-      {
-        title: "Браслеты",
-        url: PAGE.JEWELRY,
+        url: `${PAGE.JEWELRY}/rings `,
       },
       {
         title: "Серьги",
-        url: PAGE.JEWELRY,
+        url: `${PAGE.JEWELRY}/earrings `,
       },
       {
-        title: "Кольца",
-        url: PAGE.JEWELRY,
+        title: "Колье",
+        url: `${PAGE.JEWELRY}/necklace `,
       },
       {
         title: "Браслеты",
-        url: PAGE.JEWELRY,
+        url: `${PAGE.JEWELRY}`,
+      },
+      {
+        title: "Шармы",
+        url: `${PAGE.JEWELRY}/rings `,
       },
     ],
   },

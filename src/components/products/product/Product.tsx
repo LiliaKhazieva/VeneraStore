@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { IProduct } from "../../screens/home/products.types";
 import styles from "./Product.module.scss";
 import { useState } from "react";

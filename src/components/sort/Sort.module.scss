@@ -1,8 +1,13 @@
-.filters {
+.sorting {
+  margin-right: 20px;
   .sort {
-    width: 200px;
+    position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+    .label {
+      font-size: 18px;
+    }
     span {
       margin-top: 10px;
     }
@@ -16,6 +21,10 @@
       cursor: pointer;
     }
     .popup {
+      position: absolute;
+      top: 85px;
+      width: 100%;
+      z-index: 99;
       margin-top: 8px;
       background-color: #fff;
       padding: 8px 0;

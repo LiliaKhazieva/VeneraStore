@@ -5,9 +5,9 @@ import styles from "./SliderProduct.module.scss";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSlider } from "@/hooks/useSlider";
 import { ICategoryCollection } from "../slider/sliderCollection.data";
-import { addSpacePrice } from "@/hooks/addSpaceNumber";
+import { addSpacePrice } from "@/hooks/addSpacePrice";
 import { NavBar } from "../navBar/NavBar";
-import { INavItem, navbarData } from "../navBar/navBar.data";
+import { INavItem, navbarDataJewelry } from "../navBar/navBar.data";
 
 // const data: string[] = [
 //   "Все",
@@ -42,7 +42,7 @@ export function SliderProducts({ arr, data }: Props) {
     <section className={styles.sliderCollection}>
       <Heading>Каталог украшений</Heading>
       <div className={`${styles.top} container`}>
-        <NavBar arr={navbarData} />
+        <NavBar arr={navbarDataJewelry} />
         <div className={styles.content}>
           <a className={styles.link} href="/">
             Подробнее &gt;

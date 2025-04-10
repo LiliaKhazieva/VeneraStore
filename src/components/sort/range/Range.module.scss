@@ -1,0 +1,15 @@
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  span {
+    border: #999696 1px solid;
+    border-radius: 8px;
+    padding: 8px 10px;
+    width: 90px;
+    text-align: center;
+  }
+}

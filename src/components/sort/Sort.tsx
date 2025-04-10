@@ -1,7 +1,11 @@
 "use client";
 import { useState } from "react";
-import styles from "./Filters.module.scss";
+import styles from "./Sort.module.scss";
 import { ArrowUpDown } from "lucide-react";
+import { SortPopup } from "./SortPopup";
+import { Range } from "./range/Range";
+import Slider from "rc-slider";
+import { Switcher } from "./switcher/Switcher";
 const data: string[] = [
   "По популярности",
   "По возрастанию",
@@ -11,15 +15,32 @@ const data: string[] = [
   "По рейтингу",
 ];
 
-export function Filters() {
+interface ISort {
+  title: string;
+  isOpenInitial: boolean;
+}
+
+export const sortData: ISort[] = [
+  { title: "Цена", isOpenInitial: true },
+  { title: "Цена", isOpenInitial: true },
+  { title: "Цена", isOpenInitial: false },
+  { title: "Цена", isOpenInitial: false },
+  { title: "Цена", isOpenInitial: false },
+];
+
+interface Props {
+  value: ISort[];
+}
+
+export function Sort() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [item, setItem] = useState(data[0]);
 
   return (
-    <div className={styles.filters}>
+    <div className={styles.sorting}>
       <div className={styles.sort}>
-        <span>Сортировка</span>
+        <span className={styles.label}>Сортировка</span>
         <span className={styles.select} onClick={() => setIsOpen(!isOpen)}>
           <ArrowUpDown size={16} />
           {item}
@@ -45,6 +66,18 @@ export function Filters() {
           </ul>
         )}
       </div>
+      <SortPopup title="Цена" initialOpen>
+        <Range max={5000} min={0} fromInitialValue={0} toInitialValue={5000} />
+      </SortPopup>
+      <SortPopup title="Новинки" initialOpen>
+        <Switcher />
+      </SortPopup>
+      <SortPopup title="Бренд">
+        <div>
+          <input type="checkbox" id="check" />
+          <label htmlFor="check">Venera</label>
+        </div>
+      </SortPopup>
     </div>
   );
 }

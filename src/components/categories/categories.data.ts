@@ -1,7 +1,7 @@
 export interface ICategory {
   title?: string;
   src?: string;
-  link: string;
+  link?: string;
   class?: boolean;
 }
 

@@ -4,11 +4,15 @@
   gap: 10px;
   cursor: pointer;
   .wrapper {
-    max-width: 320px;
-    max-height: 320px;
+    max-width: 300px;
+    max-height: 300px;
     position: relative;
+    display: flex;
+    justify-content: center;
     .img {
       object-fit: cover;
+      height: 300px;
+      width: 300px;
     }
   }
   .btnViewing {

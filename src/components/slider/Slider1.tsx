@@ -3,14 +3,14 @@ import { useSlider } from "@/hooks/useSlider";
 import styles from "./Slider.module.scss";
 import { ICategoryCollection } from "./sliderCollection.data";
 import { ArrowLeft, ArrowRight, Link } from "lucide-react";
-import { addSpacePrice } from "@/hooks/addSpaceNumber";
+import { addSpacePrice } from "@/hooks/addSpacePrice";
 import { Heading } from "../Heading";
 
 interface Props {
   arr: ICategoryCollection[];
 }
 
-export function Slider({ arr }: Props) {
+export function Slider1({ arr }: Props) {
   const { translate, transition, handleClickNext, handleClickPrev } = useSlider(
     {
       length: arr.length,

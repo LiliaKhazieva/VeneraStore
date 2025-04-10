@@ -1,0 +1,32 @@
+.btn {
+  background-color: #999696;
+  height: 25px;
+  width: 45px;
+  border-radius: 18px;
+  padding: 2px;
+  .circle {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .translate {
+    transform: translateX(21px);
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .noTranslate {
+    transform: translateX(0);
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+.btnActive {
+  background-color: #eb46cd;
+}

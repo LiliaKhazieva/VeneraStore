@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { INavItem } from "./navBar.data";
 import styles from "./NavBar.module.scss";
+import Link from "next/link";
 
 interface INavbar {
   arr: INavItem[];
@@ -11,7 +12,8 @@ export function NavBar({ arr }: INavbar) {
   return (
     <div className={styles.navbar}>
       {arr.map((item, i) => (
-        <button
+        <Link
+          href={item.url}
           key={i}
           onClick={() => setActiveIndex(i)}
           className={
@@ -21,7 +23,7 @@ export function NavBar({ arr }: INavbar) {
           }
         >
           {item.title}
-        </button>
+        </Link>
       ))}
     </div>
   );
