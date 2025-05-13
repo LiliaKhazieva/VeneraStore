@@ -1,6 +1,4 @@
 "use client";
-import { use, useEffect, useRef, useState } from "react";
-import { Heading } from "../Heading";
 import styles from "./SliderProduct.module.scss";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSlider } from "@/hooks/useSlider";
@@ -9,22 +7,12 @@ import { addSpacePrice } from "@/hooks/addSpacePrice";
 import { NavBar } from "../navBar/NavBar";
 import { INavItem, navbarDataJewelry } from "../navBar/navBar.data";
 
-// const data: string[] = [
-//   "Все",
-//   "Кольца",
-//   "Шармы",
-//   "Серьги",
-//   "Колье и цепи",
-//   "Браслеты",
-// ];
-
 interface Props {
   arr: INavItem[];
   data: ICategoryCollection[];
 }
 
 export function SliderProducts({ arr, data }: Props) {
-  // const [active, setActive] = useState(0);
   const { translate, transition, handleClickNext, handleClickPrev } = useSlider(
     {
       length: arr.length,
@@ -40,7 +28,7 @@ export function SliderProducts({ arr, data }: Props) {
 
   return (
     <section className={styles.sliderCollection}>
-      <Heading>Каталог украшений</Heading>
+      <h2>Каталог украшений</h2>
       <div className={`${styles.top} container`}>
         <NavBar arr={navbarDataJewelry} />
         <div className={styles.content}>
@@ -65,8 +53,8 @@ export function SliderProducts({ arr, data }: Props) {
             transform: `translateX(${translate}px)`,
           }}
         >
-          {data?.map((item) => (
-            <a className={styles.link} href={item.link}>
+          {data?.map((item, i) => (
+            <a key={i} className={styles.link} href={item.link}>
               <img src={item.src} alt="" />
 
               <span className={styles.price}>

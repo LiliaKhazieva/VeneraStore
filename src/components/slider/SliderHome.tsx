@@ -4,13 +4,12 @@ import styles from "./Slider.module.scss";
 import { ICategoryCollection } from "./sliderCollection.data";
 import { ArrowLeft, ArrowRight, Link } from "lucide-react";
 import { addSpacePrice } from "@/hooks/addSpacePrice";
-import { Heading } from "../Heading";
 
 interface Props {
   arr: ICategoryCollection[];
 }
 
-export function Slider1({ arr }: Props) {
+export function SliderHome({ arr }: Props) {
   const { translate, transition, handleClickNext, handleClickPrev } = useSlider(
     {
       length: arr.length,
@@ -58,8 +57,8 @@ export function Slider1({ arr }: Props) {
             transform: `translateX(${translate}px)`,
           }}
         >
-          {arr.map((item) => (
-            <a className={styles.link} href={item.link}>
+          {arr.map((item, index) => (
+            <a key={index} className={styles.link} href={item.link}>
               <img src={item.src} alt="" />
 
               <span className={styles.price}>

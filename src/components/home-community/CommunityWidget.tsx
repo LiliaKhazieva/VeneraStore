@@ -23,8 +23,8 @@ export function CommunityWidget({ arr }: Props) {
       </div>
       <div className={styles.bottom}>
         <ul>
-          {arr.map((item) => (
-            <li>
+          {arr.map((item, i) => (
+            <li key={i}>
               <div className={styles.overlay}>
                 <Heart color="#fff" />
               </div>

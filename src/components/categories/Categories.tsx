@@ -1,6 +1,6 @@
 import styles from "./Categories.module.scss";
 import cn from "clsx";
-import { categoriesData, ICategory } from "./categories.data";
+import { categoriesData } from "./categories.data";
 
 export function Categories() {
   return (

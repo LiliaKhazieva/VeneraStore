@@ -9,7 +9,7 @@ export function Collection({ data }: Props) {
   return (
     <section className={`${styles.collection} container`}>
       {data.map((item) => (
-        <div className={styles.item}>
+        <div key={item.title} className={styles.item}>
           <a className={styles.title} href="/">
             <span>{item.title}</span>
           </a>

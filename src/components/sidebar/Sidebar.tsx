@@ -9,7 +9,6 @@ interface Props {
 }
 
 export function Sidebar({ ref }: Props) {
-  const pathname = usePathname();
   return (
     <div className={styles.wrapper}>
       <div className={styles.sidebar} ref={ref}>

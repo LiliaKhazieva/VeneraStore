@@ -2,12 +2,9 @@
 import { Crown, Heart, Search, ShoppingCart, User, X } from "lucide-react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import { useClickOutside } from "@/hooks/useClickOutside";
 import { navData } from "./nav.data";
 
 export function Header() {
-  // const { ref, isShow, setIsShow } = useClickOutside(false);
-
   return (
     <header className={styles.header}>
       <div className={styles.content}>
