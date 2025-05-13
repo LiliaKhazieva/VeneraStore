@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./Carousel.module.scss";
-import { IItem, sliderData } from "./carousel.data";
+import { IItem } from "./carousel.data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface Props {

@@ -1,5 +1,4 @@
 import { Sort } from "../sort/Sort";
-import { IProduct } from "../screens/home/products.types";
 import { Product } from "./product/Product";
 import styles from "./Products.module.scss";
 

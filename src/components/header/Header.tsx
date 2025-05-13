@@ -1,5 +1,5 @@
 "use client";
-import { Crown, Heart, Search, ShoppingCart, User, X } from "lucide-react";
+import { Crown, Heart, Search, ShoppingCart, User } from "lucide-react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { navData } from "./nav.data";

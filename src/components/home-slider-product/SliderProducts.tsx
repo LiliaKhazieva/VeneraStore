@@ -6,6 +6,7 @@ import { ICategoryCollection } from "../slider/sliderCollection.data";
 import { addSpacePrice } from "@/hooks/addSpacePrice";
 import { NavBar } from "../navBar/NavBar";
 import { INavItem, navbarDataJewelry } from "../navBar/navBar.data";
+import Link from "next/link";
 
 interface Props {
   arr: INavItem[];
@@ -32,9 +33,9 @@ export function SliderProducts({ arr, data }: Props) {
       <div className={`${styles.top} container`}>
         <NavBar arr={navbarDataJewelry} />
         <div className={styles.content}>
-          <a className={styles.link} href="/">
+          <Link className={styles.link} href="/">
             Подробнее &gt;
-          </a>
+          </Link>
           <div className={styles.btns}>
             <button className={styles.prev} onClick={() => handleClickPrev()}>
               <ArrowLeft />
@@ -55,7 +56,7 @@ export function SliderProducts({ arr, data }: Props) {
         >
           {data?.map((item, i) => (
             <a key={i} className={styles.link} href={item.link}>
-              <img src={item.src} alt="" />
+              <img src={item.src} alt={item.title} />
 
               <span className={styles.price}>
                 {addSpacePrice(item.price)} &#8381;

@@ -2,6 +2,7 @@ import { ArrowRight, Heart } from "lucide-react";
 import styles from "./CommunityWidget.module.scss";
 import cn from "clsx";
 import { ICommunityItem } from "./community.data";
+import Link from "next/link";
 
 interface Props {
   arr: ICommunityItem[];
@@ -16,10 +17,10 @@ export function CommunityWidget({ arr }: Props) {
           Вдохновляемся вашими образами в украшениях Venera. Загружайте свои
           фото и ваш образ появится на сайте{" "}
         </p>
-        <a href="/">
+        <Link href="/">
           <span>Смотреть больше</span>
           <ArrowRight />
-        </a>
+        </Link>
       </div>
       <div className={styles.bottom}>
         <ul>
