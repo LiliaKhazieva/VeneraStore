@@ -1,8 +1,14 @@
 "use client";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import styles from "./SortPopup.module.scss";
 
-export function SortPopup({ children, title, initialOpen }: any) {
+interface Props {
+  children: ReactNode;
+  title: string;
+  initialOpen?: boolean;
+}
+
+export function SortPopup({ children, title, initialOpen }: Props) {
   const [isOpen, setIsOpen] = useState(initialOpen);
 
   return (

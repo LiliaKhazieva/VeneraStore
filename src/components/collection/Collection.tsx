@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ICollectionItem } from "./collection.data";
 import styles from "./Collection.module.scss";
 
@@ -8,15 +9,15 @@ interface Props {
 export function Collection({ data }: Props) {
   return (
     <section className={`${styles.collection} container`}>
-      {data.map((item) => (
-        <div key={item.title} className={styles.item}>
-          <a className={styles.title} href="/">
+      {data.map((item, i) => (
+        <div key={i} className={styles.item}>
+          <Link className={styles.title} href="/">
             <span>{item.title}</span>
-          </a>
+          </Link>
           <a className={styles.link} href={item.link}>
             Подробнее &gt;&gt;&gt;
           </a>
-          <img src={item.src} alt="" />
+          <img src={item.src} alt={item.title} />
         </div>
       ))}
     </section>

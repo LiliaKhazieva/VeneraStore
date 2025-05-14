@@ -1,5 +1,4 @@
 "use client";
-import { usePathname } from "next/navigation";
 import styles from "./Sidebar.module.scss";
 import { SIDEBAR_DATA } from "./sidebar.data";
 import { RefObject } from "react";

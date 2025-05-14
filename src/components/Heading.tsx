@@ -1,4 +1,6 @@
-export function Heading({ children }) {
+import { PropsWithChildren } from "react";
+
+export function Heading({ children }: PropsWithChildren) {
   return (
     <div className="container">
       <h2

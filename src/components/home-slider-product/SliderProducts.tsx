@@ -1,4 +1,5 @@
 "use client";
+import { Heading } from "../Heading";
 import styles from "./SliderProduct.module.scss";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSlider } from "@/hooks/useSlider";
@@ -29,7 +30,7 @@ export function SliderProducts({ arr, data }: Props) {
 
   return (
     <section className={styles.sliderCollection}>
-      <h2>Каталог украшений</h2>
+      <Heading>Каталог украшений</Heading>
       <div className={`${styles.top} container`}>
         <NavBar arr={navbarDataJewelry} />
         <div className={styles.content}>
@@ -57,7 +58,6 @@ export function SliderProducts({ arr, data }: Props) {
           {data?.map((item, i) => (
             <a key={i} className={styles.link} href={item.link}>
               <img src={item.src} alt={item.title} />
-
               <span className={styles.price}>
                 {addSpacePrice(item.price)} &#8381;
               </span>

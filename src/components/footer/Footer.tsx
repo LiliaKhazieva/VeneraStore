@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <Link className={styles.link} href={"/"}>
+        <Link className={styles.link} href="/">
           <span>Venera</span>
           <Crown color="#f84ab5" />
         </Link>

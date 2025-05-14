@@ -112,7 +112,7 @@ export function Carousel({
   }, [offset]);
 
   return (
-    <section className={styles.slider} ref={sliderRef}>
+    <div className={styles.slider} ref={sliderRef}>
       <button
         className={`${styles.btn} ${styles.left}`}
         onClick={() => handleClickPrev()}
@@ -145,6 +145,6 @@ export function Carousel({
           ></div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

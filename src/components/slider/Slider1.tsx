@@ -2,14 +2,15 @@
 import { useSlider } from "@/hooks/useSlider";
 import styles from "./Slider.module.scss";
 import { ICategoryCollection } from "./sliderCollection.data";
-import { ArrowLeft, ArrowRight, Link } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { addSpacePrice } from "@/hooks/addSpacePrice";
+import Link from "next/link";
 
 interface Props {
   arr: ICategoryCollection[];
 }
 
-export function SliderHome({ arr }: Props) {
+export function Slider1({ arr }: Props) {
   const { translate, transition, handleClickNext, handleClickPrev } = useSlider(
     {
       length: arr.length,
@@ -36,9 +37,9 @@ export function SliderHome({ arr }: Props) {
           Шкатулка стилиста
         </h2>
         <div className={styles.content}>
-          <a className={styles.link} href="/">
+          <Link className={styles.link} href="/">
             Подробнее &gt;
-          </a>
+          </Link>
           <div className={styles.btns}>
             <button className={styles.prev} onClick={() => handleClickPrev()}>
               <ArrowLeft />
@@ -57,10 +58,9 @@ export function SliderHome({ arr }: Props) {
             transform: `translateX(${translate}px)`,
           }}
         >
-          {arr.map((item, index) => (
-            <a key={index} className={styles.link} href={item.link}>
-              <img src={item.src} alt="" />
-
+          {arr.map((item, i) => (
+            <a key={i} className={styles.link} href={item.link}>
+              <img src={item.src} alt={item.title} />
               <span className={styles.price}>
                 {addSpacePrice(item.price)} &#8381;
               </span>

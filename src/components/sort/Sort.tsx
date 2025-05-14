@@ -4,7 +4,6 @@ import styles from "./Sort.module.scss";
 import { ArrowUpDown } from "lucide-react";
 import { SortPopup } from "./SortPopup";
 import { Range } from "./range/Range";
-import Slider from "rc-slider";
 import { Switcher } from "./switcher/Switcher";
 const data: string[] = [
   "По популярности",
@@ -28,10 +27,6 @@ export const sortData: ISort[] = [
   { title: "Цена", isOpenInitial: false },
 ];
 
-interface Props {
-  value: ISort[];
-}
-
 export function Sort() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,6 +44,7 @@ export function Sort() {
           <ul className={styles.popup}>
             {data.map((item, i) => (
               <li
+                key={i}
                 className={
                   activeIndex === i
                     ? `${styles.order} ${styles.active}`

@@ -6,11 +6,10 @@ import { Carousel } from "@/components/carousel/Carousel";
 import { collectionData } from "@/components/collection/collection.data";
 import { communityData } from "@/components/home-community/community.data";
 import { sliderCollectionData } from "@/components/slider/sliderCollection.data";
-
+import { Slider1 } from "@/components/slider/Slider1";
 import { sliderData } from "@/components/carousel/carousel.data";
 import { SliderProducts } from "@/components/home-slider-product/SliderProducts";
 import { navbarDataJewelry } from "@/components/navBar/navBar.data";
-import { SliderHome } from "@/components/slider/SliderHome";
 
 export default function HomePage() {
   return (
@@ -24,7 +23,7 @@ export default function HomePage() {
       />
       <Collection data={collectionData} />
       <Categories />
-      <SliderHome arr={sliderCollectionData} />
+      <Slider1 arr={sliderCollectionData} />
       <CommunityWidget arr={communityData} />
       <SliderProducts arr={navbarDataJewelry} data={sliderCollectionData} />
     </>
