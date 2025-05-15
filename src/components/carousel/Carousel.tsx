@@ -20,14 +20,17 @@ export function Carousel({
   autoPlayTime,
   infinite,
 }: Props) {
-  const getWidth = () => window.innerWidth;
   const [transition, setTransition] = useState(transitionDuration);
-  const [width, setWidth] = useState(getWidth());
+  const [width, setWidth] = useState(0);
   const [pages, setPages] = useState([arr[arr.length - 1], ...arr, arr[0]]);
   const [clone, setClone] = useState({ head: 1, tail: 1 });
   const [offset, setOffset] = useState(-clone.head * width);
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  });
 
   useEffect(() => {
     const resizeHandler = (e: any) => {

@@ -34,7 +34,7 @@ export function SliderProducts({ arr, data }: Props) {
       <div className={`${styles.top} container`}>
         <NavBar arr={navbarDataJewelry} />
         <div className={styles.content}>
-          <Link className={styles.link} href="/">
+          <Link className={styles.link} href="#">
             Подробнее &gt;
           </Link>
           <div className={styles.btns}>

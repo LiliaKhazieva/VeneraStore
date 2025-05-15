@@ -37,7 +37,7 @@ export function Slider1({ arr }: Props) {
           Шкатулка стилиста
         </h2>
         <div className={styles.content}>
-          <Link className={styles.link} href="/">
+          <Link className={styles.link} href="#">
             Подробнее &gt;
           </Link>
           <div className={styles.btns}>

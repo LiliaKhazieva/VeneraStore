@@ -17,7 +17,7 @@ export function CommunityWidget({ arr }: Props) {
           Вдохновляемся вашими образами в украшениях Venera. Загружайте свои
           фото и ваш образ появится на сайте{" "}
         </p>
-        <Link href="/">
+        <Link href="#">
           <span>Смотреть больше</span>
           <ArrowRight />
         </Link>
