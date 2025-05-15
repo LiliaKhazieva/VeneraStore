@@ -11,6 +11,7 @@ export function Categories() {
           <a key={i} href={item.link}>
             <div className={styles.category}>
               <img src={item.src} alt={item.title} />
+
               <span
                 className={cn(styles.name, item.class && styles.nameUnderline)}
               >
