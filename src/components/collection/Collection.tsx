@@ -17,7 +17,6 @@ export function Collection({ data }: Props) {
           <a className={styles.link} href={item.link}>
             Подробнее &gt;&gt;&gt;
           </a>
-          // eslint-disable-next-line
           <img src={item.src} alt={item.title} />
         </div>
       ))}

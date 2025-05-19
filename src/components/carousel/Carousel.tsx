@@ -21,27 +21,9 @@ export function Carousel({
   infinite,
 }: Props) {
   const [transition, setTransition] = useState(transitionDuration);
-  const [width, setWidth] = useState(0);
-  const [pages, setPages] = useState([arr[arr.length - 1], ...arr, arr[0]]);
-  const [clone, setClone] = useState({ head: 1, tail: 1 });
-  const [offset, setOffset] = useState(-clone.head * width);
+  const [items, setItems] = useState([...arr]);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  });
-
-  useEffect(() => {
-    const resizeHandler = (e: any) => {
-      const _width = e.current?.offsetWidth;
-      setWidth(_width);
-      setOffset(-clone.head * width);
-    };
-    resizeHandler(sliderRef);
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  }, [clone, width]);
+  const [slideNumber, setSlideNumber] = useState(0);
 
   useEffect(() => {
     if (transition === 0) {
@@ -51,57 +33,24 @@ export function Carousel({
     }
   }, [transition]);
 
-  useEffect(() => {
-    if (!infinite) return;
-    if (offset == 0) {
-      setTimeout(() => {
-        setTransition(0);
-        setOffset(-(width * (pages.length - 1 - clone.tail)));
-      }, transitionDuration);
-      return;
-    }
-    if (offset == -(width * (pages.length - 1))) {
-      setTimeout(() => {
-        setTransition(0);
-        setOffset(-(clone.head * width));
-      }, transitionDuration);
-      return;
-    }
-  }, [infinite, offset, width, pages, clone]);
-
   const handleClickNext = () => {
-    if (activeIndex < pages.length - 1) {
-      setActiveIndex(activeIndex + 1);
+    if (slideNumber < items.length - 1) {
+      setSlideNumber(slideNumber + 1);
     } else {
-      setActiveIndex(0);
+      setSlideNumber(0);
     }
-
-    setOffset((currentOffset) => {
-      const newOffset = currentOffset - width;
-      const maxOffset = -(width * (pages.length - 1));
-
-      return Math.max(newOffset, maxOffset);
-    });
   };
 
   const handleClickPrev = () => {
-    if (activeIndex == 0) {
-      setActiveIndex(pages.length - 1);
+    if (slideNumber == 0) {
+      setSlideNumber(items.length - 1);
     } else {
-      setActiveIndex(activeIndex - 1);
+      setSlideNumber(slideNumber - 1);
     }
-    setOffset((currentOffset) => {
-      const newOffset = currentOffset + width;
-      return Math.min(newOffset, 0);
-    });
   };
 
   const handleDotClick = (i: number) => {
-    setOffset((currentOffset) => {
-      const newOffset = currentOffset + width;
-      return newOffset;
-    });
-    setActiveIndex(i);
+    setSlideNumber(i);
   };
 
   useEffect(() => {
@@ -112,7 +61,7 @@ export function Carousel({
     return () => {
       clearInterval(interval);
     };
-  }, [offset]);
+  }, [slideNumber]);
 
   return (
     <div className={styles.slider} ref={sliderRef}>
@@ -132,19 +81,19 @@ export function Carousel({
         className={styles.track}
         style={{
           transition: `${transition}ms`,
-          transform: `translateX(${offset}px)`,
+          transform: `translateX(-${slideNumber * 100}%)`,
         }}
       >
-        {pages.map((item, i) => (
+        {items.map((item, i) => (
           <img key={i} src={item.src} alt="" />
         ))}
       </div>
       <div className={styles.dots}>
-        {[...new Array(pages.length)].map((_, i) => (
+        {[...new Array(items.length)].map((_, i) => (
           <div
             onClick={() => handleDotClick(i)}
             key={i}
-            className={activeIndex === i ? styles.active : styles.dot}
+            className={slideNumber === i ? styles.active : styles.dot}
           ></div>
         ))}
       </div>

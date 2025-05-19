@@ -1,6 +1,6 @@
 "use client";
 
-import { IProduct } from "../../screens/home/products.types";
+import { IProduct } from "../products.types";
 import styles from "./Product.module.scss";
 import { useState } from "react";
 import { Popup } from "@/components/popup/Popup";
@@ -26,7 +26,7 @@ export function Product({ item }: { item: IProduct }) {
 
         <button className={styles.btn}>Купить</button>
       </li>
-      {isOpen && <Popup onClose={onClose} />}
+      {isOpen && <Popup onClose={onClose} item={item} />}
     </>
   );
 }

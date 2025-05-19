@@ -1,4 +1,4 @@
-import { IProduct } from "@/components/screens/home/products.types";
+import { IProduct } from "@/components/products/products.types";
 
 export const ringsData: IProduct[] = [
   {

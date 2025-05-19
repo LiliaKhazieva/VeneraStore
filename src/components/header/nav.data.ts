@@ -30,11 +30,7 @@ export const navData: INav[] = [
       },
       {
         title: "Браслеты",
-        url: `${PAGE.JEWELRY}`,
-      },
-      {
-        title: "Шармы",
-        url: `${PAGE.JEWELRY}/rings `,
+        url: `${PAGE.JEWELRY}/bracelets`,
       },
     ],
   },

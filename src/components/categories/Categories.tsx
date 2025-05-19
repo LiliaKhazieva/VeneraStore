@@ -10,8 +10,7 @@ export function Categories() {
         {categoriesData.map((item, i) => (
           <a key={i} href={item.link}>
             <div className={styles.category}>
-              <img src={item.src} alt={item.title} />
-
+              {!item.class ? <img src={item.src} alt={item.title} /> : ""}
               <span
                 className={cn(styles.name, item.class && styles.nameUnderline)}
               >
