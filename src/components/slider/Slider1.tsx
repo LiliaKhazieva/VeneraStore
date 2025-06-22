@@ -23,6 +23,7 @@ export function Slider1({ arr }: Props) {
       autoPlayTime: 5000,
     }
   );
+
   return (
     <section className={styles.sliderCollection}>
       <div className={`${styles.top} container`}>

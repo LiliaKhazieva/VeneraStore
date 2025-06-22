@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   height: 40px;
+  @media (max-width: 700px) {
+    display: none;
+  }
   .location {
     display: flex;
     align-items: center;

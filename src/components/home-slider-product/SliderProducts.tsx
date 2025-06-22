@@ -17,7 +17,7 @@ interface Props {
 export function SliderProducts({ arr, data }: Props) {
   const { translate, transition, handleClickNext, handleClickPrev } = useSlider(
     {
-      length: arr.length,
+      length: data.length,
       initialTranslate: 150,
       step: 2,
       widthStep: 300,
@@ -27,7 +27,7 @@ export function SliderProducts({ arr, data }: Props) {
       autoPlayTime: 5000,
     }
   );
-
+  console.log(arr.length);
   return (
     <section className={styles.sliderCollection}>
       <Heading>Каталог украшений</Heading>

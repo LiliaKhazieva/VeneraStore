@@ -2,6 +2,9 @@
   padding: 50px 20px;
   display: flex;
   gap: 40px;
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
   .item {
     text-align: center;
     flex: 33%;
@@ -21,6 +24,9 @@
         }
         @media (max-width: 750px) {
           font-size: 12px;
+        }
+        @media (max-width: 630px) {
+          font-size: 20px;
         }
       }
     }

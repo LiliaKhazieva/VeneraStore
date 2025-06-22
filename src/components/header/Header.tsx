@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.content}>
-        <Link href="#" className={styles.link}>
+        <Link href="https://venera-store.vercel.app/" className={styles.link}>
           <span>Venera</span>
           <Crown color="#f84ab5" />
         </Link>
