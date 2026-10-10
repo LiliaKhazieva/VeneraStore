@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // basePath: "/venera-store",
+  basePath: "/venera-store",
+  output: "export",
   images: {
-    domains: ["images.unsplash.com"],
+    unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
