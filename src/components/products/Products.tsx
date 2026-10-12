@@ -8,7 +8,8 @@ export function Products({ products }: { products: IProduct[] }) {
     <div className={styles.content}>
       <Sort />
       <ul className={styles.list}>
-        {!!products.length && products.map((item) => <Product item={item} />)}
+        {!!products.length &&
+          products.map((item) => <Product item={item} key={item.id} />)}
       </ul>
     </div>
   );

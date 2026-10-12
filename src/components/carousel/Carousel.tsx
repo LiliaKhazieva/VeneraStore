@@ -18,7 +18,6 @@ export function Carousel({
   transitionDuration,
   autoPlay,
   autoPlayTime,
-  infinite,
 }: Props) {
   const [transition, setTransition] = useState(transitionDuration);
   const [items, setItems] = useState([...arr]);

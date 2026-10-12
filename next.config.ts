@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/venera-store",
+  basePath: "/VeneraStore",
   output: "export",
   images: {
     unoptimized: true,

@@ -10,8 +10,8 @@ interface IRange {
   max: number;
   fromInitialValue?: number;
   toInitialValue?: number;
-  onChangeFromValue?: (value: number) => void; // скоро будем запрашивать с сервера
-  onChangeToValue?: (value: number) => void; // скоро будем запрашивать с сервера
+  onChangeFromValue?: (value: number) => void;
+  onChangeToValue?: (value: number) => void;
 }
 
 export function Range({
@@ -19,8 +19,6 @@ export function Range({
   max,
   fromInitialValue = 0,
   toInitialValue = max,
-  onChangeFromValue,
-  onChangeToValue,
 }: IRange) {
   const [fromValue, setFromValue] = useState(fromInitialValue);
   const [toValue, setToValue] = useState(toInitialValue);

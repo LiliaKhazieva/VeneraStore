@@ -1,6 +1,7 @@
 {
   "name": "venera-store",
   "version": "0.1.0",
+  "homepage": "https://liliakhazieva.github.io/VeneraStore",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,6 +26,7 @@
     "@types/react-transition-group": "^4.4.12",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "gh-pages": "^6.3.0",
     "sass": "^1.85.0",
     "typescript": "^5"
   }
