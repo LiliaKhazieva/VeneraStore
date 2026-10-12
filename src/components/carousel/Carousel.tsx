@@ -20,9 +20,10 @@ export function Carousel({
   autoPlayTime,
 }: Props) {
   const [transition, setTransition] = useState(transitionDuration);
-  const [items, setItems] = useState([...arr]);
+
   const sliderRef = useRef<HTMLDivElement>(null);
   const [slideNumber, setSlideNumber] = useState(0);
+  const items = arr;
 
   useEffect(() => {
     if (transition === 0) {
