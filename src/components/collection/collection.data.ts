@@ -8,16 +8,16 @@ export const collectionData: ICollectionItem[] = [
   {
     title: "Еще больше цветов",
     link: "/",
-    src: "https://pixnio.com/free-images/2020/07/28/2020-07-28-11-06-55-960x1440.jpg",
+    src: "https://panclubrussia.ru/media/catalog/product/cache/0b0a402db25eee4ec0e659d94a6f0366/c/p/cpd-bracc.lb.h__1.png",
   },
   {
     title: "Акцентный минимализм",
     link: "/",
-    src: "https://pixnio.com/free-images/2025/03/12/2025-03-12-10-04-54-1920x1440.jpeg",
+    src: "https://panclubrussia.ru/media/catalog/product/cache/0b0a402db25eee4ec0e659d94a6f0366/c/p/cpd-bracc.lb.h_2.png",
   },
   {
     title: "Новинки месяца",
     link: "/",
-    src: "https://pixnio.com/free-images/2020/12/23/2020-12-23-12-50-35-960x1440.jpg",
+    src: "https://panclubrussia.ru/media/catalog/product/cache/0b0a402db25eee4ec0e659d94a6f0366/c/p/cpd-bracc.lb.h_2.png",
   },
 ];

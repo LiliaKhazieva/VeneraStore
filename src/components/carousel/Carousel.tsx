@@ -85,7 +85,7 @@ export function Carousel({
         }}
       >
         {items.map((item, i) => (
-          <img key={i} src={item.src} alt="" />
+          <img key={i} src={item.src} alt="1234" />
         ))}
       </div>
       <div className={styles.dots}>

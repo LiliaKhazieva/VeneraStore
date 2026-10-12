@@ -2,8 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   basePath: "/VeneraStore",
-  output: "export",
   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pixnio.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
     unoptimized: true,
   },
   eslint: {
