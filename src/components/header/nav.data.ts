@@ -36,11 +36,11 @@ export const navData: INav[] = [
   },
   {
     title: "Новинки Venera",
-    url: PAGE.VENERABRANDS,
+    url: PAGE.HOME,
   },
   {
     title: "Бренды",
-    url: PAGE.BRANDS,
+    url: PAGE.HOME,
     dropdown: [
       {
         title: "Все бренды",
@@ -50,10 +50,10 @@ export const navData: INav[] = [
   },
   {
     title: "Подарочные карты",
-    url: PAGE.GIFTCARD,
+    url: PAGE.HOME,
   },
   {
     title: "Sale",
-    url: PAGE.SALE,
+    url: PAGE.HOME,
   },
 ];

@@ -3,12 +3,13 @@ import { Crown, Heart, Search, ShoppingCart, User } from "lucide-react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { navData } from "./nav.data";
+import { PAGE } from "@/config/page.config";
 
 export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.content}>
-        <Link href="https://venera-store.vercel.app/" className={styles.link}>
+        <Link href={PAGE.HOME} className={styles.link}>
           <span>Venera</span>
           <Crown color="#f84ab5" />
         </Link>
